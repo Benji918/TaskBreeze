@@ -56,3 +56,39 @@ A Django REST API application for users to manage and assign tasks
 
 8. **Task Analytics:**
    - Collect and analyze data on task completion times, task dependencies, and user productivity to identify areas for improvement.
+
+**User Features:**
+
+* Create, read, update, and delete their own tasks.
+* Create, read, update, and delete their own task lists.
+* Prioritize their tasks.
+* Set due dates and reminders for their tasks.
+* Add comments to tasks.
+* Attach files to tasks.
+* View their own task history.
+* Collaborate on tasks with other users (if enabled by the admin).
+* View task reports (if enabled by the admin).
+
+**Admin Features:**
+
+* Create, read, update, and delete all tasks and task lists.
+* Prioritize tasks for all users.
+* Set due dates and reminders for tasks for all users.
+* Add comments to tasks for all users.
+* Attach files to tasks for all users.
+* View the task history for all users.
+* Manage user accounts, including creating, editing, and deleting users.
+* Assign user roles and permissions.
+* Configure system settings, such as default task priorities and due date reminders.
+* Generate task reports for all users.
+* Integrate the task management system with other systems, such as calendar apps or email clients.
+* Manage automated workflows for task events.
+* Analyze task data to identify areas for improvement.
+
+In addition to the above, admins may also have the ability to:
+
+* Create and manage task templates.
+* Enable or disable task recurrence.
+* Enable or disable task dependencies.
+* Enable or disable task collaboration.
+* Customize the task management system's user interface and branding.
