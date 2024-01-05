@@ -2,8 +2,9 @@
 A Django REST API application for users to manage and assign tasks 
 # Link to architectural diagram
 https://lucid.app/lucidchart/b8b56bc8-ffa4-4253-990a-3a2638e46676/edit?viewport_loc=-9273%2C-4244%2C16513%2C7542%2CmF6v7kzw-swz&invitationId=inv_d74a2024-32c8-4c5e-b53e-99ff1f251dd4
-
 ![](https://github.com/Benji918/Django-Task-Manager/blob/main/TASK%20MANAGEMENT%20SYSTEM.jpeg)
+
+https://dbdiagram.io/d/TaskBreeze-ER-diagram-6592f36cac844320ae0f568f
 
 # Proposed Features
 **Basic Features:**
