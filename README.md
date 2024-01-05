@@ -5,6 +5,8 @@ https://lucid.app/lucidchart/b8b56bc8-ffa4-4253-990a-3a2638e46676/edit?viewport_
 ![](https://github.com/Benji918/Django-Task-Manager/blob/main/TASK%20MANAGEMENT%20SYSTEM.jpeg)
 
 https://dbdiagram.io/d/TaskBreeze-ER-diagram-6592f36cac844320ae0f568f
+![](https://github.com/Benji918/TaskBreeze/blob/main/TaskBreeze%20ER%20diagram.png)
+
 
 # Proposed Features
 **Basic Features:**
