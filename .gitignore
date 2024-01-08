@@ -1,3 +1,6 @@
 /venv
 /.idea
-db.sqlite
+db.sqlite3
+/users/__pycache__
+/taskbreeze/__pycache__
+/core/__pycache__
