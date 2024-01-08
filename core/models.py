@@ -21,6 +21,7 @@ class CustomUser(AbstractUser):
     username = models.CharField(_('first_name'), unique=True, max_length=50, blank=False, null=False)
     email = models.EmailField(_('email address'), unique=True)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
+    is_admin = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -55,7 +56,7 @@ class Task(models.Model):
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='open')
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='low')
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    due_date = models.DateTimeField(auto_now=True)
+    due_date = models.DateField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
