@@ -18,7 +18,7 @@ class CustomUser(AbstractUser):
         editable=False,
         unique=True
     )
-    username = models.CharField(_('first_name'), unique=True, max_length=50, blank=False, null=False)
+    username = models.CharField(_('username'), unique=True, max_length=50, blank=False, null=False)
     email = models.EmailField(_('email address'), unique=True)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
     is_admin = models.BooleanField(default=False)
