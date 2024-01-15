@@ -11,8 +11,8 @@ def create_user(**params):
         'username': 'johndoe',
     }
 
-    defaults.update(**params)
-    user = get_user_model().objects.create_user(**params)
+    defaults.update(params)
+    user = get_user_model().objects.create_user(**defaults)
     return user
 
 
@@ -27,3 +27,38 @@ class ModelTests(TestCase):
 
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
+
+    def test_create_user_with_blank_email(self):
+        """Test creating user with blank email """
+        with self.assertRaises(ValueError):
+            create_user(email='', password='testpass')
+
+    def test_create_user_with_admin_false(self):
+        """Test creating user with is_admin false"""
+        user = create_user()
+
+        self.assertFalse(user.is_admin)
+
+    def test_create_superuser(self):
+        """Test creation of superuser"""
+        email = 'test@example.com'
+        password = '123456789'
+        user = get_user_model().objects.create_superuser(
+            email=email,
+            password=password,
+        )
+        self.assertTrue(user.is_superuser)
+        self.assertTrue(user.is_staff)
+
+    def test_task_creation(self):
+        """Test creation of task"""
+        user = create_user()
+        task = models.Task.objects.create(
+            title='New_task',
+            description='task_description',
+            user=user,
+        )
+
+        self.assertEqual(task.status, 'open')
+        self.assertEqual(task.priority, 'low')
+        self.assertEqual(task.user, user)
