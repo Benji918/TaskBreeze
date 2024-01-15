@@ -51,7 +51,7 @@ class ModelTests(TestCase):
         self.assertTrue(user.is_staff)
 
     def test_task_creation(self):
-        """Test creation of task"""
+        """Test creation of tasks"""
         user = create_user()
         task = models.Task.objects.create(
             title='New_task',
@@ -62,3 +62,20 @@ class ModelTests(TestCase):
         self.assertEqual(task.status, 'open')
         self.assertEqual(task.priority, 'low')
         self.assertEqual(task.user, user)
+
+    def test_task_comment_creation(self):
+        """Test task comment creation"""
+        user = create_user()
+        task = models.Task.objects.create(
+            title='New_task',
+            description='task_description',
+            user=user,
+        )
+        task_comment = models.TaskComment.objects.create(
+            task=task,
+            user=user,
+            comment='This is a task comment'
+        )
+
+        self.assertEquals(task_comment.task, task)
+        self.assertEquals(task_comment.user, user)
