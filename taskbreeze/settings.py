@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # local_app
     'core',
     'users',
+    'tasks',
 
     # third_party apps
     'rest_framework',
