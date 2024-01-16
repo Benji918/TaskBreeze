@@ -34,7 +34,7 @@ urlpatterns = [
 
     # application urls
     path('auth/', include('djoser.urls')),
-    path('jwt/', include('djoser.urls.jwt')),
+    path('auth/', include('djoser.urls.jwt')),
 ]
 
 if settings.DEBUG:
