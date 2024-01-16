@@ -46,6 +46,7 @@ class Task(models.Model):
         ('medium', 'medium'),
         ('low', 'low')
     )
+
     id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
