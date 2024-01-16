@@ -40,11 +40,13 @@ class Task(models.Model):
         ('in progress', 'in progress'),
         ('completed', 'completed'),
     )
+
     PRIORITY_CHOICES = (
         ('high', 'high'),
         ('medium', 'medium'),
         ('low', 'low')
     )
+
     id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
